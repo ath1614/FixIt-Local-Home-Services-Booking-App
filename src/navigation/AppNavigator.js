@@ -6,7 +6,7 @@ import CategoriesScreen from "../modules/categories/CategoriesScreen";
 import ProvidersScreen from "../modules/providers/ProvidersScreen";
 import BookingForm from "../modules/booking/BookingForm";
 import HistoryScreen from "../modules/history/HistoryScreen";
-import FavoritesScreen from "../modules/favorites/FavoritesScreen";
+import FavoritesScreen from "../modules/favourites/FavoritesScreen";
 import DashboardScreen from "../modules/dashboard/DashboardScreen";
 
 const Stack = createNativeStackNavigator();
