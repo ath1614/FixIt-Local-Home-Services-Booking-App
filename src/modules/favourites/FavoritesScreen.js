@@ -23,7 +23,7 @@ export default function FavoritesScreen({ navigation }) {
     // In a real app, this would update the provider's favorite status
     console.log("Toggle favorite for provider:", providerId);
   };
-  
+
     return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Favorite Providers</Text>
@@ -55,3 +55,39 @@ export default function FavoritesScreen({ navigation }) {
     </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f8f9fa',
+    padding: 20,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#2c3e50',
+    marginBottom: 8,
+  },
+  subtitle: {
+    fontSize: 14,
+    color: '#7f8c8d',
+    marginBottom: 20,
+  },
+  emptyState: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  emptyText: {
+    fontSize: 18,
+    color: '#7f8c8d',
+    marginBottom: 8,
+  },
+  emptySubtext: {
+    fontSize: 14,
+    color: '#bdc3c7',
+    textAlign: 'center',
+    paddingHorizontal: 40,
+  },
+});
