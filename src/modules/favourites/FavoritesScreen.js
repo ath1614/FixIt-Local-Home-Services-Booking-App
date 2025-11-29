@@ -23,4 +23,35 @@ export default function FavoritesScreen({ navigation }) {
     // In a real app, this would update the provider's favorite status
     console.log("Toggle favorite for provider:", providerId);
   };
+  
+    return (
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.title}>Favorite Providers</Text>
+      
+      {favorites.length === 0 ? (
+        <View style={styles.emptyState}>
+          <Text style={styles.emptyText}>No favorites yet</Text>
+          <Text style={styles.emptySubtext}>
+            Add providers to favorites by tapping the star icon
+          </Text>
+        </View>
+      ) : (
+        <>
+          <Text style={styles.subtitle}>{favorites.length} favorite providers</Text>
+          <FlatList
+            data={favorites}
+            keyExtractor={(item) => item.id.toString()}
+            renderItem={({ item }) => (
+              <ProviderCard
+                item={item}
+                onBook={() => handleBook(item)}
+                onFav={() => toggleFavorite(item.id)}
+              />
+            )}
+            showsVerticalScrollIndicator={false}
+          />
+        </>
+      )}
+    </SafeAreaView>
+  );
 }
